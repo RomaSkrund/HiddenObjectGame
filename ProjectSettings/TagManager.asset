@@ -8,6 +8,11 @@ TagManager:
   - MediumDisk
   - SmallDisk
   - Character
+  - UI
+  - firstKey
+  - secondKey
+  - thirdKey
+  - fourthKey
   layers:
   - Default
   - TransparentFX

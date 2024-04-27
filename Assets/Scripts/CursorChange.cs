@@ -17,7 +17,7 @@ public class CursorChange : MonoBehaviour
     private void Update()
     {
         var rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
-        if (rayHit.collider != null)
+        if (rayHit.collider != null )
         {
             PointAtObject(rayHit.collider.gameObject);
         }
@@ -31,11 +31,11 @@ public class CursorChange : MonoBehaviour
     {
         switch (obj.tag)
         {
-            case "Character":
-                Cursor.SetCursor(_talkCursor, Vector2.zero, CursorMode.ForceSoftware);
-                break;
+           case "Character":
+               Cursor.SetCursor(_talkCursor, Vector2.zero, CursorMode.ForceSoftware);
+               break;
             case "Zoom":
-                Cursor.SetCursor(_zoomCursor, Vector2.zero, CursorMode.ForceSoftware); //Not use before
+               Cursor.SetCursor(_zoomCursor, Vector2.zero, CursorMode.ForceSoftware); //Not use before
                 break;
             case "Interact":
                 Cursor.SetCursor(_interactionCursor, Vector2.zero, CursorMode.ForceSoftware); //Not use before

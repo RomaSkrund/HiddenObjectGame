@@ -6,7 +6,6 @@ public class TalkToCharacter : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("onMouseDown");
         _dialogGroup.SetActive(true);
     }
 }
