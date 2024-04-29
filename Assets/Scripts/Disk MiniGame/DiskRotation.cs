@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class DiskRotation : MonoBehaviour
@@ -8,7 +9,7 @@ public class DiskRotation : MonoBehaviour
     [SerializeField] private Transform _mediumDisk;
     [SerializeField] private Transform _smallDisk;
     private Camera _camera;
-    private float _mouseRotationZ;
+    private float _mouseRotationZDeg;
 
     private void Start()
     {
@@ -18,7 +19,12 @@ public class DiskRotation : MonoBehaviour
     private void SearchMouseAngle()
     {
         Vector3 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-        _mouseRotationZ = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
+        _mouseRotationZDeg = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg; //-180 | 180
+    }
+
+    private void OnMouseDown()
+    {
+
     }
 
     public void OnMouseDrag()
@@ -26,20 +32,20 @@ public class DiskRotation : MonoBehaviour
         if (transform.CompareTag("LargeDisk"))
         {
             SearchMouseAngle();
-            _mediumDisk.rotation = Quaternion.Euler(0, 0, _mediumDisk.rotation.z - _mouseRotationZ);
-            _largeDisk.rotation = Quaternion.Euler(0, 0, _mouseRotationZ);
+            //_mediumDisk.rotation = Quaternion.Euler(0, 0, _mediumDisk.rotation.z - _mouseRotationZDeg);
+            _largeDisk.rotation = Quaternion.Euler(0, 0, _mouseRotationZDeg);
         }
-        else if (transform.CompareTag("MediumDisk"))
-        {
-            SearchMouseAngle();
-            _largeDisk.rotation = Quaternion.Euler(0, 0, _largeDisk.rotation.z - _mouseRotationZ);
-            _smallDisk.rotation = Quaternion.Euler(0, 0, _smallDisk.rotation.z - _mouseRotationZ);
-            _mediumDisk.rotation = Quaternion.Euler(0, 0, _mouseRotationZ);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 0, _mouseRotationZ);
-        }
+        //else if (transform.CompareTag("MediumDisk"))
+        //{
+        //    SearchMouseAngle();
+        //    _largeDisk.rotation = Quaternion.Euler(0, 0, _largeDisk.rotation.z - _mouseRotationZDeg);
+        //    _smallDisk.rotation = Quaternion.Euler(0, 0, _smallDisk.rotation.z - _mouseRotationZDeg);
+        //    _mediumDisk.rotation = Quaternion.Euler(0, 0, _mouseRotationZDeg);
+        //}
+        //else
+        //{
+        //    _smallDisk.rotation = Quaternion.Euler(0, 0, _mouseRotationZDeg);
+        //}
         
     }
 }

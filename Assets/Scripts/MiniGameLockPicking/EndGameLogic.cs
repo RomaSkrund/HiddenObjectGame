@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGameLogic : MonoBehaviour
+public class EndMagicDoorGameLogic : MonoBehaviour
 {
     [SerializeField] private MasterKeyChanger _firstMasterMasterKey;
     [SerializeField] private MasterKeyChanger _secondMasterMasterKey;
