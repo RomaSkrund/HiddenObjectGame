@@ -15,6 +15,10 @@ TagManager:
   - fourthKey
   - sign
   - lock
+  - item
+  - ball1
+  - ball2
+  - ball3
   layers:
   - Default
   - TransparentFX
