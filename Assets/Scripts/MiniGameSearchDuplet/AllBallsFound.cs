@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class AllBallsFound : MonoBehaviour
 {
     [SerializeField] private BallsSpawner _spawner;
+
+    public static Action onBallsFouned;
 
     private int _ballsOnScene;
 
@@ -29,7 +32,7 @@ public class AllBallsFound : MonoBehaviour
         _ballsOnScene--;
         if(_ballsOnScene == 0)
         {
-            Debug.Log("End Game");
+            onBallsFouned?.Invoke();
         }
     }
 }

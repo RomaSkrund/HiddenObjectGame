@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstSceneFirstDialogEvents : MonoBehaviour
 {
@@ -44,6 +45,9 @@ public class FirstSceneFirstDialogEvents : MonoBehaviour
                 break;
             case 20:
                 _getHintWindow.SetActive(true);
+                break;
+            case 22:
+                SceneManager.LoadScene("1stSceneSearch");
                 break;
         }
     }

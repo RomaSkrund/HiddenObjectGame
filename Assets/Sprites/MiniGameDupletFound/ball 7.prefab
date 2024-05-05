@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 60
   m_Sprite: {fileID: 21300000, guid: bd659c6be08a7b245abd59d98f1ca085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultSprite: {fileID: 21300000, guid: f73dca3be7ddfa24daf9997156467d23, type: 3}
-  _defaultDarkSprite: {fileID: 21300000, guid: 8e5c6644b9a17e842b9fdc14600b1255, type: 3}
   _ballSprite: {fileID: 21300000, guid: bd659c6be08a7b245abd59d98f1ca085, type: 3}
 --- !u!58 &-4982918265633053048
 CircleCollider2D:
