@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 368043519}
   - component: {fileID: 368043518}
   - component: {fileID: 368043520}
+  - component: {fileID: 368043521}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0417\u0430\u0434\u0430\u0447\u043D\u0438\u043A"
   m_TagString: Untagged
@@ -728,6 +729,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.99, y: 5.67}
   m_EdgeRadius: 0
+--- !u!114 &368043521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368043516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &381750434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1579,7 @@ GameObject:
   - component: {fileID: 696596044}
   - component: {fileID: 696596043}
   - component: {fileID: 696596045}
+  - component: {fileID: 696596046}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u043A\u0430\u0440\u0442\u0443"
   m_TagString: Untagged
@@ -1699,6 +1713,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.99, y: 5.67}
   m_EdgeRadius: 0
+--- !u!114 &696596046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696596041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &725609044
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2066,7 @@ GameObject:
   - component: {fileID: 792826527}
   - component: {fileID: 792826526}
   - component: {fileID: 792826528}
+  - component: {fileID: 792826529}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0443"
   m_TagString: Untagged
@@ -2173,6 +2200,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.99, y: 5.67}
   m_EdgeRadius: 0
+--- !u!114 &792826529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792826524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912395939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,6 +2262,7 @@ GameObject:
   - component: {fileID: 933062101}
   - component: {fileID: 933062102}
   - component: {fileID: 933062103}
+  - component: {fileID: 933062104}
   m_Layer: 0
   m_Name: Leshiy
   m_TagString: Character
@@ -3146,6 +3186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogGroup: {fileID: 1573211817}
+--- !u!114 &933062104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933062098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c642ad3cfc0994183d99b633cb2c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989360198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,6 +4329,7 @@ MonoBehaviour:
   _zoomCursor: {fileID: 2800000, guid: 2f2d9263f450f3f439dd8a7b2001f52f, type: 3}
   _interactionCursor: {fileID: 2800000, guid: 9f865d91bac29e645976895096a59cf2, type: 3}
   _questionCursor: {fileID: 2800000, guid: e8e1ccf42b532fa4bb109a2043b1922a, type: 3}
+  _handCursor: {fileID: 2800000, guid: 568e8984ceb3d864a919d8d0b935518b, type: 3}
 --- !u!4 &1337248694
 Transform:
   m_ObjectHideFlags: 0
@@ -4457,6 +4510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _videoPlayer: {fileID: 1346911880}
   _rawImage: {fileID: 517454886}
+  _dialogGroup: {fileID: 1573211817}
 --- !u!1 &1459685355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,7 +4735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1573211818
 RectTransform:
   m_ObjectHideFlags: 0

@@ -39,11 +39,13 @@ public class Notebook1stScene : MonoBehaviour
 
     private void OnEnable()
     {
-        GetChest.onChestGeted += AddTask;
+        TasksAddAndRemove.onNewTaskAdded += AddTask;
+        TasksAddAndRemove.onNewTaskRemoved += RemoveTask;
     }
 
     private void OnDisable()
     {
-        GetChest.onChestGeted -= AddTask;
+        TasksAddAndRemove.onNewTaskAdded -= AddTask;
+        TasksAddAndRemove.onNewTaskRemoved -= RemoveTask;
     }
 }

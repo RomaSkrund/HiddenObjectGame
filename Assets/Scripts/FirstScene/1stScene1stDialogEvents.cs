@@ -20,6 +20,9 @@ public class FirstSceneFirstDialogEvents : MonoBehaviour
     {
         switch (_talk.NumberOfPhrase)
         {
+            case 1:
+                Cursor.visible = false; 
+                break;
             case 2:
                 _characterSprite.SetActive(true);
                 break;
@@ -32,6 +35,7 @@ public class FirstSceneFirstDialogEvents : MonoBehaviour
             case 7:
                 if (_isDialogActive)
                 {
+                    Cursor.visible = true;
                     _inventoryGroup.SetActive(true);
                     _dialogeGroup.SetActive(false);
                     _isDialogActive = false;

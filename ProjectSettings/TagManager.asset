@@ -19,6 +19,11 @@ TagManager:
   - ball1
   - ball2
   - ball3
+  - Chest
+  - Shovel
+  - Root
+  - Worm
+  - StoneKey
   layers:
   - Default
   - TransparentFX

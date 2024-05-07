@@ -9,6 +9,7 @@ public class VideoPlay : MonoBehaviour
 {
     [SerializeField] private VideoPlayer _videoPlayer;
     [SerializeField] private RawImage _rawImage;
+    [SerializeField] private GameObject _dialogGroup;
 
     private void Start()
     {
@@ -21,15 +22,20 @@ public class VideoPlay : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            _videoPlayer.enabled = false;
-            _rawImage.gameObject.SetActive(false);
+            StopVideo();
         }
     }
 
     IEnumerator StartVideo()
     {
         yield return new WaitForSeconds((float)_videoPlayer.length);
+        StopVideo();
+    }
+
+    private void StopVideo()
+    {
         _videoPlayer.enabled = false;
         _rawImage.gameObject.SetActive(false);
+        _dialogGroup.SetActive(true);
     }
 }

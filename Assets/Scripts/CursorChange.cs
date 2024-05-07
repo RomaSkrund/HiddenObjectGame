@@ -7,17 +7,37 @@ public class CursorChange : MonoBehaviour
     [SerializeField] private Texture2D _zoomCursor;
     [SerializeField] private Texture2D _interactionCursor;
     [SerializeField] private Texture2D _questionCursor;
+    [SerializeField] private Texture2D _handCursor;
 
     private void OnEnable()
     {
-        TalkToCharacter.onMouseOnCharMoved += MouseOnCharacter;
-        TalkToCharacter.onMouseOutCharMoved += DefaultCursor;
+        HoverZoom.onZoomHovered += MouseLoupe;
+        HoverZoom.onZoomNotHovered += DefaultCursor;
+
+        HoverGears.onGearsHovered += MouseGears;
+        HoverGears.onGearsNotHovered += DefaultCursor;
+
+        HoverHand.onHandHovered += MouseHand;
+        HoverHand.onHandNotHovered += DefaultCursor;
+
+        HoverCharacter.onCharacterHovered += MouseLips;
+        HoverCharacter.onCharacterNotHovered += DefaultCursor;
+
+        TapOnBush.onBushTapped += DefaultCursor;
     }
 
     private void OnDisable()
     {
-        TalkToCharacter.onMouseOnCharMoved -= MouseOnCharacter;
-        TalkToCharacter.onMouseOutCharMoved -= DefaultCursor;
+        HoverZoom.onZoomHovered -= MouseLoupe;
+        HoverZoom.onZoomNotHovered -= DefaultCursor;
+
+        HoverGears.onGearsHovered -= MouseGears;
+        HoverGears.onGearsNotHovered -= DefaultCursor;
+
+        HoverHand.onHandHovered -= MouseHand;
+        HoverHand.onHandNotHovered -= DefaultCursor;
+
+        TapOnBush.onBushTapped -= DefaultCursor;
     }
 
     private void Start()
@@ -25,9 +45,24 @@ public class CursorChange : MonoBehaviour
         Cursor.SetCursor(_defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
-    private void MouseOnCharacter()
+    private void MouseLips()
     {
         Cursor.SetCursor(_talkCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    private void MouseLoupe()
+    {
+        Cursor.SetCursor(_zoomCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    private void MouseGears()
+    {
+        Cursor.SetCursor(_interactionCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    private void MouseHand()
+    {
+        Cursor.SetCursor(_handCursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     private void DefaultCursor()

@@ -7,13 +7,13 @@ public class GetChest : MonoBehaviour
 {
     [SerializeField] private GameObject _chestInInventory;
     [SerializeField] private GameObject _getChestGroup;
-
-    public static Action<string> onChestGeted;
+    [SerializeField] private GameObject _woodCollider;
 
     private void OnMouseDown()
     {
         _chestInInventory.SetActive(true);
         _getChestGroup.SetActive(false);
-        onChestGeted?.Invoke("Открыть шкатулку");
+        TasksAddAndRemove.onNewTaskAdded?.Invoke("Открыть шкатулку");
+        _woodCollider.SetActive(true);
     }
 }
