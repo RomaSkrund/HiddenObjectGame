@@ -17,4 +17,9 @@ public class HoverHand : MonoBehaviour
     {
         onHandNotHovered?.Invoke();
     }
+
+    private void OnDisable()
+    {
+        onHandNotHovered?.Invoke();
+    }
 }

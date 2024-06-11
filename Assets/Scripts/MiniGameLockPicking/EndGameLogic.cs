@@ -14,6 +14,10 @@ public class EndMagicDoorGameLogic : MonoBehaviour
     [SerializeField] private GameObject _masterKeyGroup;
     [SerializeField] private GameObject _lockKeyGroup;
 
+    [SerializeField] private GameObject _lockPickingGroup;
+    [SerializeField] private GameObject _lockPickingDoorCollider;
+    [SerializeField] private GameObject _doorsColliders;
+
     private void OnEnable()
     {
         ToLockButton.onToLeftButtonPushed += RightPositionChecker;
@@ -31,7 +35,10 @@ public class EndMagicDoorGameLogic : MonoBehaviour
            (_thirdMasterMasterKey.KeyValue == _lockButtonsCreate.ThirdLock) &&
            (_fourthMasterMasterKey.KeyValue == _lockButtonsCreate.FourthLock))
         {
-            Debug.Log("Крутой чел пацан прошел игру");
+            FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
+            _lockPickingDoorCollider.SetActive(false);
+            _lockPickingGroup.SetActive(false);
+            _doorsColliders.SetActive(true);
         }
         else
         {

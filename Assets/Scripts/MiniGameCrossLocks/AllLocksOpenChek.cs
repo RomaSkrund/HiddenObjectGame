@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class AllLocksOpenChek : MonoBehaviour
 {
+    [SerializeField] private GameObject _crossLocksCollider;
+    [SerializeField] private GameObject _crossLocksGroup;
+    [SerializeField] private GameObject _doorsColliders;
+
     private GameObject[] _locks;
 
     private int _lockCount;
@@ -35,7 +39,10 @@ public class AllLocksOpenChek : MonoBehaviour
         }
         if (_lockCount == 0)
         {
-            Debug.Log("End Game");
+            FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
+            _crossLocksCollider.SetActive(false);
+            _crossLocksGroup.SetActive(false);
+            _doorsColliders.SetActive(true);
         }
         _lockCount = 0;
     }

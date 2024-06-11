@@ -24,6 +24,20 @@ TagManager:
   - Root
   - Worm
   - StoneKey
+  - Bundle
+  - Bottle
+  - Berries
+  - Pincers
+  - Stick
+  - Thorn
+  - Powder
+  - Recipe
+  - Poison
+  - Lens
+  - Medallion
+  - Bottle1
+  - Bottle2
+  - Bottle3
   layers:
   - Default
   - TransparentFX

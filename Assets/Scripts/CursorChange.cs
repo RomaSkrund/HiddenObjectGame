@@ -22,8 +22,6 @@ public class CursorChange : MonoBehaviour
 
         HoverCharacter.onCharacterHovered += MouseLips;
         HoverCharacter.onCharacterNotHovered += DefaultCursor;
-
-        TapOnBush.onBushTapped += DefaultCursor;
     }
 
     private void OnDisable()
@@ -37,7 +35,8 @@ public class CursorChange : MonoBehaviour
         HoverHand.onHandHovered -= MouseHand;
         HoverHand.onHandNotHovered -= DefaultCursor;
 
-        TapOnBush.onBushTapped -= DefaultCursor;
+        HoverCharacter.onCharacterHovered -= MouseLips;
+        HoverCharacter.onCharacterNotHovered -= DefaultCursor;
     }
 
     private void Start()

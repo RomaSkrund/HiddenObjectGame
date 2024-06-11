@@ -17,4 +17,9 @@ public class HoverGears : MonoBehaviour
     {
         onGearsNotHovered?.Invoke();
     }
+
+    private void OnDisable()
+    {
+        onGearsNotHovered?.Invoke();
+    }
 }

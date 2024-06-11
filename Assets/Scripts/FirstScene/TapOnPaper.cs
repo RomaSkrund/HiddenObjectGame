@@ -13,5 +13,6 @@ public class TapOnPaper : MonoBehaviour
         _chestGroup.SetActive(false);
         _paper.SetActive(true);
         Destroy(_chestPrefab);
+        MapButtonActivated.onNextLocationActivated?.Invoke(2);
     }
 }

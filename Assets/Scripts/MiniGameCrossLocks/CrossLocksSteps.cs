@@ -29,7 +29,8 @@ public class CrossLocksSteps : MonoBehaviour
         _stepsToEnd--;
         if(_stepsToEnd == 0)
         {
-            SceneManager.LoadScene("MiniGameCrossLocks");
+            LockSpawner.onGameRestarted?.Invoke();
+            _stepsToEnd = 9;
         }
         _text.SetText(_stepsToEnd.ToString());
     }

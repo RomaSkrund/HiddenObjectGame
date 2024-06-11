@@ -17,4 +17,9 @@ public class HoverCharacter : MonoBehaviour
     {
         onCharacterNotHovered?.Invoke();
     }
+
+    private void OnDisable()
+    {
+        onCharacterNotHovered?.Invoke();
+    }
 }

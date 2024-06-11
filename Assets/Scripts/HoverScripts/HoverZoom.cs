@@ -17,4 +17,9 @@ public class HoverZoom : MonoBehaviour
     {
         onZoomNotHovered?.Invoke();
     }
+
+    private void OnDisable()
+    {
+        onZoomNotHovered?.Invoke();
+    }
 }
