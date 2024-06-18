@@ -14,6 +14,8 @@ public class TapOnPoison : MonoBehaviour
 
     private void OnMouseDown()
     {
+        TasksAddAndRemove.onNewTaskRemoved?.Invoke("Сварить зелье против зарослей");
+        TasksAddAndRemove.onNewTaskAdded?.Invoke("Использовать зелье на зарослях");
         Instantiate(_poisonPrefab, _parentInventory);
         _bottleSprite.SetActive(false);
         gameObject.SetActive(false);

@@ -16,10 +16,6 @@ public class FourthSceneDialogEvents : MonoBehaviour
     [SerializeField] private PolygonCollider2D _talkToCharacterCollrider;
     [SerializeField] private GameObject _yagaCollider;
     [SerializeField] private GameObject _miniGameBoilerGroup;
-    [SerializeField] private GameObject _inventory;
-    [SerializeField] private GameObject _hintGroup;
-    [SerializeField] private GameObject _poisonBoxGroup;
-    [SerializeField] private GameObject _miniGameUI;
 
 
     private bool _isItemGet = false;
@@ -60,10 +56,7 @@ public class FourthSceneDialogEvents : MonoBehaviour
                     _characterSprite.SetActive(false);
                     _dialogeGroup.SetActive(false);
                     _miniGameBoilerGroup.SetActive(true);
-                    _inventory.SetActive(false);
-                    _hintGroup.SetActive(false);
-                    _poisonBoxGroup.SetActive(false);
-                    _miniGameUI.SetActive(true);
+                    MiniGameUIActivated.onMiniGameActivated?.Invoke(4);
                     _event16Done = true;
                 }
                 break;

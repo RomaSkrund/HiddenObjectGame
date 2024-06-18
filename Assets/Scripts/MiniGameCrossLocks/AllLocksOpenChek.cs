@@ -20,11 +20,13 @@ public class AllLocksOpenChek : MonoBehaviour
     private void OnEnable()
     {
         LockLogic.onLockOpened += ChekLocks;
+        MiniGameSkip.onSkipButtonPushed += EndMiniGame;
     }
 
     private void OnDisable()
     {
         LockLogic.onLockOpened -= ChekLocks;
+        MiniGameSkip.onSkipButtonPushed -= EndMiniGame;
     }
 
     private void ChekLocks()
@@ -39,11 +41,17 @@ public class AllLocksOpenChek : MonoBehaviour
         }
         if (_lockCount == 0)
         {
-            FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
-            _crossLocksCollider.SetActive(false);
-            _crossLocksGroup.SetActive(false);
-            _doorsColliders.SetActive(true);
+            EndMiniGame();
         }
         _lockCount = 0;
+    }
+
+    private void EndMiniGame()
+    {
+        FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
+        _crossLocksCollider.SetActive(false);
+        _crossLocksGroup.SetActive(false);
+        _doorsColliders.SetActive(true);
+        MiniGameUIActivated.onMiniGameDisactivated?.Invoke(1);
     }
 }

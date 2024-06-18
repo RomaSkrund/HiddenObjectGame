@@ -21,11 +21,13 @@ public class EndMagicDoorGameLogic : MonoBehaviour
     private void OnEnable()
     {
         ToLockButton.onToLeftButtonPushed += RightPositionChecker;
+        MiniGameSkip.onSkipButtonPushed += EndMiniGame;
     }
 
     private void OnDisable()
     {
         ToLockButton.onToLeftButtonPushed -= RightPositionChecker;
+        MiniGameSkip.onSkipButtonPushed -= EndMiniGame;
     }
 
     private void RightPositionChecker()
@@ -35,10 +37,7 @@ public class EndMagicDoorGameLogic : MonoBehaviour
            (_thirdMasterMasterKey.KeyValue == _lockButtonsCreate.ThirdLock) &&
            (_fourthMasterMasterKey.KeyValue == _lockButtonsCreate.FourthLock))
         {
-            FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
-            _lockPickingDoorCollider.SetActive(false);
-            _lockPickingGroup.SetActive(false);
-            _doorsColliders.SetActive(true);
+            EndMiniGame();
         }
         else
         {
@@ -50,5 +49,14 @@ public class EndMagicDoorGameLogic : MonoBehaviour
     {
         _lockKeyGroup.SetActive(false);
         _masterKeyGroup.SetActive(true);
+    }
+
+    private void EndMiniGame()
+    {
+        FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
+        _lockPickingDoorCollider.SetActive(false);
+        _lockPickingGroup.SetActive(false);
+        _doorsColliders.SetActive(true);
+        MiniGameUIActivated.onMiniGameDisactivated?.Invoke(2);
     }
 }

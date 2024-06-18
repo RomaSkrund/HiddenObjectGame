@@ -11,6 +11,7 @@ public class AllSignsSeek : MonoBehaviour
     [SerializeField] private GameObject _miniGameUIGroup;
     [SerializeField] private GameObject _hintGroup;
     [SerializeField] private GameObject _poisonGroup;
+    [SerializeField] private GameObject _inventory;
 
     private void OnEnable()
     {
@@ -34,11 +35,14 @@ public class AllSignsSeek : MonoBehaviour
 
     private void EndGame()
     {
+        MapButtonActivated.onNextLocationActivated?.Invoke(4);
+        TasksAddAndRemove.onNewTaskAdded?.Invoke("Войти в избу");
         _magicDoorGroup.SetActive(false);
         _magicDoorCollider.SetActive(true);
         Cursor.visible = true;
         _miniGameUIGroup.SetActive(false);
         _hintGroup.SetActive(true);
         _poisonGroup.SetActive(true);
+        _inventory.SetActive(true);
     }
 }

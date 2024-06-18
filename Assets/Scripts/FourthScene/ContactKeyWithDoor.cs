@@ -7,6 +7,7 @@ public class ContactKeyWithDoor : MonoBehaviour
     [SerializeField] private GameObject _miniGameGroup;
     [SerializeField] private string _tagOfKey;
     [SerializeField] private GameObject _doorCollidersGroup;
+    [SerializeField] private int _numberOfMiniGame;
 
     private bool _doorIsOpen = false;
 
@@ -20,6 +21,7 @@ public class ContactKeyWithDoor : MonoBehaviour
             _doorIsOpen = true;
             _miniGameGroup.SetActive(true);
             _doorCollidersGroup.SetActive(false);
+            MiniGameUIActivated.onMiniGameActivated?.Invoke(_numberOfMiniGame);
         }
     }
 }

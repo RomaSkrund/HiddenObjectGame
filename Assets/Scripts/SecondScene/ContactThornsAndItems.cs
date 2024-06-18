@@ -21,6 +21,7 @@ public class ContactThornsAndItems : MonoBehaviour
 
         if (collision.tag == "Poison")
         {
+            TasksAddAndRemove.onNewTaskRemoved?.Invoke("Использовать зелье на зарослях");
             _sceneBG.sprite = _sceneWithoutThorns;
             Destroy(collision.gameObject);
             gameObject.SetActive(false);

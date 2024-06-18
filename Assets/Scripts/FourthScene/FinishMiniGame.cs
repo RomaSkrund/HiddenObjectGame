@@ -37,9 +37,10 @@ public class FinishMiniGame : MonoBehaviour
         }
         else if( _countEndedMiniGame == 3)
         {
+            TasksAddAndRemove.onNewTaskRemoved?.Invoke("Открыть все двери");
             _hiddenItemsGroup.SetActive(true);
-            _poisonBoxUI.SetActive(false);
             _searchDupletUI.SetActive(true);
+            _poisonBoxUI.SetActive(false);
         }
     }
 

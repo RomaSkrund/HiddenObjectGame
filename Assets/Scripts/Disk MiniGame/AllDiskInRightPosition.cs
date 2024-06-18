@@ -23,11 +23,13 @@ public class AllDiskInRightPosition : MonoBehaviour
 
     private void OnEnable()
     {
+        MiniGameSkip.onSkipButtonPushed += EndMiniGame;
         onDiskPositionChanged += ChekForDiskPoistion;
     }
 
     private void OnDisable()
     {
+        MiniGameSkip.onSkipButtonPushed -= EndMiniGame;
         onDiskPositionChanged -= ChekForDiskPoistion;
     }
 
@@ -50,13 +52,19 @@ public class AllDiskInRightPosition : MonoBehaviour
         }
         if(_largeDiskInPosition && _middleDiskInPosition && _smallDiskInPosition)
         {
-            FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
-            _disksDoorCollider.SetActive(false);
-            _disksGroup.SetActive(false);
-            _doorsColliders.SetActive(true);
+            EndMiniGame();
         }
         _largeDiskInPosition = false;
         _middleDiskInPosition = false;
         _smallDiskInPosition = false;
+    }
+
+    private void EndMiniGame()
+    {
+        FinishMiniGame.onThreeDoorMiniGameEnded?.Invoke();
+        _disksDoorCollider.SetActive(false);
+        _disksGroup.SetActive(false);
+        _doorsColliders.SetActive(true);
+        MiniGameUIActivated.onMiniGameDisactivated?.Invoke(3);
     }
 }
