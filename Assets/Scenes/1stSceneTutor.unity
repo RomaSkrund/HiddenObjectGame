@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 368043518}
   - component: {fileID: 368043520}
   - component: {fileID: 368043521}
+  - component: {fileID: 368043522}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0417\u0430\u0434\u0430\u0447\u043D\u0438\u043A"
   m_TagString: Untagged
@@ -740,6 +741,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &368043522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368043516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d75a7700d058745bc1c89b0287168c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leshiyPC2D: {fileID: 933062101}
 --- !u!1 &380537795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,6 +2061,7 @@ GameObject:
   - component: {fileID: 696596043}
   - component: {fileID: 696596045}
   - component: {fileID: 696596046}
+  - component: {fileID: 696596047}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u043A\u0430\u0440\u0442\u0443"
   m_TagString: Untagged
@@ -2192,6 +2207,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &696596047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696596041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d75a7700d058745bc1c89b0287168c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leshiyPC2D: {fileID: 933062101}
 --- !u!1 &703117750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2732,7 @@ GameObject:
   - component: {fileID: 792826526}
   - component: {fileID: 792826528}
   - component: {fileID: 792826529}
+  - component: {fileID: 792826530}
   m_Layer: 0
   m_Name: "\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u041F\u043E\u0434\u0441\u043A\u0430\u0437\u043A\u0443"
   m_TagString: Untagged
@@ -2849,6 +2878,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea83cde22026bb4284c96e7deb573e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &792826530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792826524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d75a7700d058745bc1c89b0287168c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leshiyPC2D: {fileID: 933062101}
 --- !u!1 &845036985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8235,7 +8277,6 @@ GameObject:
   - component: {fileID: 2070158531}
   - component: {fileID: 2070158533}
   - component: {fileID: 2070158532}
-  - component: {fileID: 2070158534}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -8300,29 +8341,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070158530}
   m_CullTransparentMesh: 1
---- !u!223 &2070158534
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070158530}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &2078119326
 GameObject:
   m_ObjectHideFlags: 0
@@ -8383,6 +8401,7 @@ MonoBehaviour:
   _getMapWindow: {fileID: 912395939}
   _getNotebookWindow: {fileID: 2097301194}
   _getHintWindow: {fileID: 1190598323}
+  _leshiyPC2D: {fileID: 933062101}
 --- !u!114 &2078119329
 MonoBehaviour:
   m_ObjectHideFlags: 0

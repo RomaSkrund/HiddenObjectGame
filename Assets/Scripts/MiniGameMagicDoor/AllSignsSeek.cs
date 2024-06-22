@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AllSignsSeek : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AllSignsSeek : MonoBehaviour
     [SerializeField] private GameObject _hintGroup;
     [SerializeField] private GameObject _poisonGroup;
     [SerializeField] private GameObject _inventory;
+    [SerializeField] private Image _BG;
+    [SerializeField] private Sprite _doorWithoutMagic;
 
     private void OnEnable()
     {
@@ -44,5 +47,6 @@ public class AllSignsSeek : MonoBehaviour
         _hintGroup.SetActive(true);
         _poisonGroup.SetActive(true);
         _inventory.SetActive(true);
+        _BG.sprite = _doorWithoutMagic;
     }
 }

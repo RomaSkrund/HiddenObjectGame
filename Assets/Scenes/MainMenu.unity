@@ -3843,6 +3843,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376008526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376008528}
+  - component: {fileID: 1376008527}
+  m_Layer: 0
+  m_Name: CursorChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1376008527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376008526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642e72b89304eef448ac5fdfa3855f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultCursor: {fileID: 2800000, guid: 9fbcf9990e19d464292c73012073836e, type: 3}
+  _talkCursor: {fileID: 2800000, guid: c219032fedb54544791444fb498be0db, type: 3}
+  _zoomCursor: {fileID: 2800000, guid: 2f2d9263f450f3f439dd8a7b2001f52f, type: 3}
+  _interactionCursor: {fileID: 2800000, guid: 9f865d91bac29e645976895096a59cf2, type: 3}
+  _questionCursor: {fileID: 2800000, guid: e8e1ccf42b532fa4bb109a2043b1922a, type: 3}
+  _handCursor: {fileID: 2800000, guid: 568e8984ceb3d864a919d8d0b935518b, type: 3}
+--- !u!4 &1376008528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376008526}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1379829340
 GameObject:
   m_ObjectHideFlags: 0
@@ -6159,3 +6209,4 @@ SceneRoots:
   - {fileID: 454436896}
   - {fileID: 2019674203}
   - {fileID: 1333819371}
+  - {fileID: 1376008528}

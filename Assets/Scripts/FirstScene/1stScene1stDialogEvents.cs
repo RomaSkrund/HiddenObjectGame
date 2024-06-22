@@ -13,6 +13,7 @@ public class FirstSceneFirstDialogEvents : MonoBehaviour
     [SerializeField] private GameObject _getMapWindow;
     [SerializeField] private GameObject _getNotebookWindow;
     [SerializeField] private GameObject _getHintWindow;
+    [SerializeField] private PolygonCollider2D _leshiyPC2D;
 
     private bool _isDialogActive = true;
 
@@ -43,12 +44,15 @@ public class FirstSceneFirstDialogEvents : MonoBehaviour
                 break;
             case 15:
                 _getMapWindow.SetActive(true);
+                _leshiyPC2D.enabled = false;
                 break;
             case 18:
                 _getNotebookWindow.SetActive(true);
+                _leshiyPC2D.enabled = false;
                 break;
             case 20:
                 _getHintWindow.SetActive(true);
+                _leshiyPC2D.enabled = false;
                 break;
             case 22:
                 SceneManager.LoadScene("1stSceneSearch");
